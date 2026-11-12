@@ -48,3 +48,13 @@ The `route print` command was used to view the routing table on the Windows host
 - VirtualBox Host-Only Network: 192.168.56.0/24
 <img src="screenshots/03-routing-table.png" width="500">
 Figure 3: Windows routing table using route print.
+
+## Part 3: Services & Interpretation
+### 3.1 Lab Target Port
+
+- Target: VulnBank
+- Domain: vulnbank.org
+- Web Protocol: HTTPS
+- Standard Port: 443
+
+Note: Port 443 is the standard HTTPS port. Its availability on the target server was not independently verified through port scanning.
