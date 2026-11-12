@@ -104,6 +104,30 @@ The IP address has an Abuse Confidence Score of 0%, indicating that AbuseIPDB ha
 
 Figure 6: IP reputation check using AbuseIPDB.
 
+### 3.4 Nmap Service Detection
+
+The Nmap command `nmap -sV -p 443 vulnbank.org` was used to identify the service running on TCP port 443.
+
+**Observation:**
+- Target IP: 172.67.134.11
+- Host Status: Up
+- Port: 443/tcp
+- State: Open
+- Service: ssl/http
+- Version: Cloudflare http proxy
+
+**Interpretation:**
+
+The scan shows that TCP port 443 is open and provides an HTTPS web service through Cloudflare's proxy. This confirms that the target IP is reachable through the HTTPS service.
+
+**Limitation:**
+
+The scan only examined port 443 on one of the four IP addresses returned by DNS. The result identifies Cloudflare's proxy service and does not confirm the actual services or versions running on VulnBank's origin server.
+
+![Figure 7: Nmap Service Detection](screenshots/07-nmap-service-detection.png)
+
+Figure 7: Nmap service detection result for VulnBank.
+
 ## Part 4: Limitations and Risks
 
 ### 4.1 Limitations
