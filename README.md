@@ -46,5 +46,5 @@ The `route print` command was used to view the routing table on the Windows host
 - Wi-Fi Network: 172.20.10.0/28
 - Default Gateway: 172.20.10.1
 - VirtualBox Host-Only Network: 192.168.56.0/24
-
+<img src="screenshots/03-routing-table.png" width="500">
 Figure 3: Windows routing table using route print.
