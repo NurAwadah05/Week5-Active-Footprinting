@@ -48,6 +48,28 @@ The `route print` command was used to view the routing table on the Windows host
 - VirtualBox Host-Only Network: 192.168.56.0/24
 <img src="screenshots/03-routing-table.png" width="500">
 Figure 3: Windows routing table using route print.
+### 2.4 Nmap Host Discovery
+
+The Nmap command `nmap -sn vulnbank.org` was used to perform host discovery.
+
+**Observation:**
+- Target: vulnbank.org
+- IP Address: 104.21.5.243
+- Host Status: Up
+- Response Time: 0.024 seconds
+- Other IP addresses were not scanned.
+
+**Interpretation:**
+
+The result shows that the selected IP address was reachable during the scan. Nmap identified the host as up with a response time of 0.024 seconds.
+
+**Limitation:**
+
+Only one of the four IP addresses returned by DNS was checked. The result confirms reachability of the selected Cloudflare IP, not the actual origin server of VulnBank.
+
+![Figure 4: Nmap Host Discovery](screenshots/04-nmap-host-discovery.png)
+
+Figure 4: Nmap host discovery result for VulnBank.
 
 ## Part 3: Services & Interpretation
 ### 3.1 Lab Target Port
