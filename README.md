@@ -61,3 +61,53 @@ Note: Port 443 is the standard HTTPS port. Its availability on the target server
 ![Figure 4: VulnBank HTTPS Connection](screenshots/04-vulnbank-https.png)
 
 Figure 4: HTTPS connection information for VulnBank.
+### 3.2 TCP Service Information
+
+The `curl -v -I` command was used to examine the HTTPS connection to VulnBank.
+
+**Observation:**
+- Destination Port: TCP 443
+- Service: HTTPS
+- HTTP Version: HTTP/1.1
+- HTTP Status: 200 OK
+- Server: Cloudflare
+
+**Interpretation:**
+
+The output confirms that a TCP connection to port 443 was successfully established. The server returned an HTTP 200 OK response, indicating that the request was successfully processed.
+
+**Limitation:**
+
+This test only confirms the HTTPS connection. It does not identify all open TCP ports or se
+![Figure 5: TCP Service Information](screenshots/05-curl-tcp-service.png)
+
+Figure 5: HTTPS connection test using curl.
+### 3.3 IP Reputation Analysis
+
+The IP address `172.67.134.11` was checked using AbuseIPDB.
+
+**Observation:**
+- IP Address: 172.67.134.11
+- Abuse Confidence Score: 0%
+- ISP: Cloudflare, Inc.
+- Usage Type: Content Delivery Network (CDN)
+- ASN: AS13335
+- Country: United States
+
+**Interpretation:**
+
+The IP address has an Abuse Confidence Score of 0%, indicating that AbuseIPDB has no abuse reports contributing to its confidence score. The IP belongs to Cloudflare and is identified as a Content Delivery Network (CDN).
+
+**Source:** [AbuseIPDB](https://www.abuseipdb.com/check/172.67.134.11)
+
+## Part 4: Limitations and Risks
+
+### 4.1 Limitations
+The activity was limited to DNS lookup, routing table inspection and HTTPS connection testing. No active Nmap scanning was performed because permission to scan the public VulnBank server was not provided. Therefore, the complete list of open ports and running services could not be identified.
+### 4.2 Risks
+
+Active scanning of public systems without permission may cause unwanted network traffic, trigger security alerts or affect system availability. Therefore, testing was limited to basic information gathering and normal HTTPS access.
+## Conclusion
+
+This activity provided an understanding of basic network information gathering using DNS lookup, routing table inspection and HTTPS connection testing. The results helped identify the website's IP addresses, network routes and HTTPS service information while maintaining the testing limitations.
+
