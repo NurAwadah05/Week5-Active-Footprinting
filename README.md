@@ -100,6 +100,10 @@ The IP address has an Abuse Confidence Score of 0%, indicating that AbuseIPDB ha
 
 **Source:** [AbuseIPDB](https://www.abuseipdb.com/check/172.67.134.11)
 
+![Figure 6: AbuseIPDB IP Reputation Check](screenshots/06-abuseipdb-ip-check.png)
+
+Figure 6: IP reputation check using AbuseIPDB.
+
 ## Part 4: Limitations and Risks
 
 ### 4.1 Limitations
