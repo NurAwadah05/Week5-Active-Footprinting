@@ -58,3 +58,6 @@ Figure 3: Windows routing table using route print.
 - Standard Port: 443
 
 Note: Port 443 is the standard HTTPS port. Its availability on the target server was not independently verified through port scanning.
+![Figure 4: VulnBank HTTPS Connection](screenshots/04-vulnbank-https.png)
+
+Figure 4: HTTPS connection information for VulnBank.
