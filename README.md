@@ -13,3 +13,16 @@ The objective of this lab is to perform active reconnaissance on an authorized v
 2. Own Host and Discovered Hosts
 3. Services and Interpretation
 4. Limitations and Risks
+
+
+## Part 1: Lab Setup
+
+| Item | Details |
+|---|---|
+| Target Name | VulnBank |
+| Target URL | https://vulnbank.org/ |
+| Application Type | Banking Web Application |
+| Target Category | Intentionally Vulnerable Web Application |
+| Purpose | Application Security Testing |
+
+**Source:** https://vulnbank.org/
